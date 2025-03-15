@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="#" aria-label="Snap Home">
+          <img src="./images/logo.svg" alt="Snap logo" />
+        </a>
+
+        <div>
+          <button
+            aria-label="Mobile navigation toggle"
+            id="navToggle"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+          >
+            <img src="./images/icon-menu.svg" alt="" />
+            <img src="./images/icon-close-menu.svg" alt="" />
+          </button>
+
+          <nav id="mobilenav">
+            <div>
+              <ul role="list">
+                <li>
+                  <button
+                    aria-expanded="false"
+                    aria-label="Toggle Features List"
+                    aria-controls="featuresList"
+                    class="listToggle"
+                  >
+                    <span>Features</span>
+                    <span
+                      ><img src="./images/icon-arrow-down.svg" alt="" />
+                      <img src="./images/icon-arrow-up.svg" alt="" />
+                    </span>
+                  </button>
+                  <ul role="list" id="featuresList">
+                    <li>
+                      <a href="#"
+                        ><img src="./images/icon-todo.svg" alt="" /><span
+                          >Todo List</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./images/icon-calendar.svg" alt="" /><span
+                          >Calendar</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./images/icon-reminders.svg" alt="" /><span
+                          >Reminders</span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./images/icon-planning.svg" alt="" /><span
+                          >Planning</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button
+                    aria-expanded="false"
+                    aria-label="Toggle Company List"
+                    class="listToggle"
+                    aria-controls="companyList"
+                  >
+                    <span>Company</span>
+                    <span
+                      ><img src="./images/icon-arrow-down.svg" alt="" />
+                      <img src="./images/icon-arrow-up.svg" alt="" />
+                    </span>
+                  </button>
+                  <ul role="list" id="companyList">
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <ul role="list">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <picture>
+          <source
+            srcset="./images/image-hero-desktop.png"
+            media="(min-width: 48rem)"
+          />
+          <img
+            src="./images/image-hero-mobile.png"
+            alt="illustration of a man making remote work"
+          />
+        </picture>
+
+        <section>
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a href="#">Learn more</a>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/repro123/" target="_blank"
+            >Bello Ibrahim</a
+          >.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
