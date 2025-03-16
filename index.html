@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
     <link
       rel="icon"
       type="image/png"
@@ -14,10 +19,12 @@
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
-  <body>
-    <header>
-      <div>
-        <a href="#" aria-label="Snap Home">
+  <body
+    class="font-epilogue text-primary antialiased min-h-dvh flex flex-col *:w-full gap-4 font-medium text-center text-primary-paragraph"
+  >
+    <header class="py-8 px-4">
+      <div class="container mx-auto w-full flex justify-between items-center">
+        <a href="#" aria-label="Snap Home" class="cursor-pointer">
           <img src="./images/logo.svg" alt="Snap logo" />
         </a>
 
@@ -27,12 +34,24 @@
             id="navToggle"
             aria-expanded="false"
             aria-controls="mobileNav"
+            class="toggle group peer"
           >
-            <img src="./images/icon-menu.svg" alt="" />
-            <img src="./images/icon-close-menu.svg" alt="" />
+            <img
+              src="./images/icon-menu.svg"
+              alt=""
+              class="group-aria-expanded:hidden"
+            />
+            <img
+              src="./images/icon-close-menu.svg"
+              alt=""
+              class="group-aria-expanded:block hidden"
+            />
           </button>
 
-          <nav id="mobilenav">
+          <nav
+            id="mobilenav"
+            class="peer-aria-[expanded=false]:hidden peer-aria-expanded:block"
+          >
             <div>
               <ul role="list">
                 <li>
@@ -40,7 +59,7 @@
                     aria-expanded="false"
                     aria-label="Toggle Features List"
                     aria-controls="featuresList"
-                    class="listToggle"
+                    class="toggle"
                   >
                     <span>Features</span>
                     <span
@@ -84,7 +103,7 @@
                   <button
                     aria-expanded="false"
                     aria-label="Toggle Company List"
-                    class="listToggle"
+                    class="toggle"
                     aria-controls="companyList"
                   >
                     <span>Company</span>
@@ -116,7 +135,7 @@
     </header>
 
     <main>
-      <div>
+      <div class="max-w-6xl mx-auto flex flex-col gap-8">
         <picture>
           <source
             srcset="./images/image-hero-desktop.png"
@@ -125,28 +144,41 @@
           <img
             src="./images/image-hero-mobile.png"
             alt="illustration of a man making remote work"
+            class="object-cover"
           />
         </picture>
 
-        <section>
-          <h1>Make remote work</h1>
-          <p>
+        <section class="px-4 w-full flex flex-col gap-4 items-center">
+          <h1 class="text-primary-head text-head font-bold">
+            Make remote work
+          </h1>
+          <p class="text-balance">
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
-          <a href="#">Learn more</a>
+          <a
+            href="#"
+            class="bg-primary-head text-primary-background px-6 py-3 border-2 border-primary-head hover:bg-primary-background hover:text-primary-head transition-colors duration-300 cursor-pointer rounded-lg"
+            >Learn more</a
+          >
         </section>
       </div>
     </main>
 
-    <footer>
-      <div>
-        <p class="attribution">
+    <footer class="mt-auto px-4">
+      <div class="max-w-6xl w-full">
+        <p>
           Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            class="cursor-pointer underline text-primary-head font-semibold hover:no-underline"
             >Frontend Mentor</a
           >. Coded by
-          <a href="https://github.com/repro123/" target="_blank"
+          <a
+            href="https://github.com/repro123/"
+            target="_blank"
+            class="cursor-pointer underline text-primary-head font-semibold hover:no-underline"
             >Bello Ibrahim</a
           >.
         </p>

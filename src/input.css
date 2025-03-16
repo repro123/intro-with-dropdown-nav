@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  /* font family*/
+  --font-epilogue: "Eplogue", sans-serif;
+
+  /* colors */
+  --color-primary-background: hsl(0, 0%, 98%);
+  --color-primary-paragraph: hsl(0, 0%, 41%);
+  --color-primary-head: hsl(0, 0%, 8%);
+
+  /* font size */
+  --text-primary: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+  --text-head: clamp(2.5rem, 2.357rem + 0.714vw, 3rem);
+}
