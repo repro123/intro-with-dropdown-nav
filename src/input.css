@@ -2,7 +2,7 @@
 
 @theme {
   /* font family*/
-  --font-epilogue: "Eplogue", sans-serif;
+  --font-epilogue: "Epilogue", sans-serif;
 
   /* colors */
   --color-primary-background: hsl(0, 0%, 98%);
@@ -11,5 +11,5 @@
 
   /* font size */
   --text-primary: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-  --text-head: clamp(2.5rem, 2.357rem + 0.714vw, 3rem);
+  --text-head: clamp(2.5rem, 1.929rem + 2.857vw, 4.5rem);
 }

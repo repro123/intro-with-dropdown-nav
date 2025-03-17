@@ -16,25 +16,26 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body
     class="font-epilogue text-primary antialiased min-h-dvh flex flex-col *:w-full gap-4 font-medium text-center text-primary-paragraph"
   >
-    <header class="py-8 px-4">
-      <div class="container mx-auto w-full flex justify-between items-center">
+    <header class="px-4 py-8">
+      <div
+        class="container flex items-center justify-between w-full mx-auto md:justify-start *:border md:gap-16"
+      >
         <a href="#" aria-label="Snap Home" class="cursor-pointer">
           <img src="./images/logo.svg" alt="Snap logo" />
         </a>
 
-        <div>
+        <div class="md:w-full">
           <button
             aria-label="Mobile navigation toggle"
             id="navToggle"
             aria-expanded="false"
             aria-controls="mobileNav"
-            class="toggle group peer"
+            class="relative z-50 cursor-pointer toggle group peer md:hidden"
           >
             <img
               src="./images/icon-menu.svg"
@@ -44,99 +45,144 @@
             <img
               src="./images/icon-close-menu.svg"
               alt=""
-              class="group-aria-expanded:block hidden"
+              class="hidden group-aria-expanded:block"
             />
           </button>
 
           <nav
             id="mobilenav"
-            class="peer-aria-[expanded=false]:hidden peer-aria-expanded:block"
+            class="max-md:peer-aria-[expanded=false]:hidden max-md:peer-aria-expanded:flex absolute z-40 top-0 right-0 bg-primary-background h-lvh w-[70%] max-md:max-w-3xs pt-20 px-4 text-left flex-col gap-4 md:flex md:static md:h-auto md:w-full md:p-0 md:flex-row md:justify-between"
           >
-            <div>
-              <ul role="list">
-                <li>
-                  <button
-                    aria-expanded="false"
-                    aria-label="Toggle Features List"
-                    aria-controls="featuresList"
-                    class="toggle"
-                  >
-                    <span>Features</span>
-                    <span
-                      ><img src="./images/icon-arrow-down.svg" alt="" />
-                      <img src="./images/icon-arrow-up.svg" alt="" />
-                    </span>
-                  </button>
-                  <ul role="list" id="featuresList">
-                    <li>
-                      <a href="#"
-                        ><img src="./images/icon-todo.svg" alt="" /><span
-                          >Todo List</span
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="./images/icon-calendar.svg" alt="" /><span
-                          >Calendar</span
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="./images/icon-reminders.svg" alt="" /><span
-                          >Reminders</span
-                        ></a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="./images/icon-planning.svg" alt="" /><span
-                          >Planning</span
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </li>
+            <ul
+              role="list"
+              class="flex flex-col gap-4 md:flex-row md:items-center"
+            >
+              <li>
+                <button
+                  aria-expanded="false"
+                  aria-controls="featuresList"
+                  class="flex items-center gap-2 cursor-pointer toggle hover:text-primary-head hover:font-medium peer group"
+                >
+                  <span class="sr-only">Toggle</span> <span>Features</span>
+                  <span
+                    ><img
+                      src="./images/icon-arrow-down.svg"
+                      alt=""
+                      class="block group-aria-expanded:hidden"
+                    />
+                    <img
+                      src="./images/icon-arrow-up.svg"
+                      alt=""
+                      class="hidden group-aria-expanded:block"
+                    />
+                  </span>
+                </button>
+                <ul
+                  role="list"
+                  id="featuresList"
+                  class="flex-col hidden gap-4 py-4 pl-6 peer-aria-expanded:flex"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-4 cursor-pointer navlink"
+                      ><img src="./images/icon-todo.svg" alt="" /><span
+                        >Todo List</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-4 cursor-pointer navlink"
+                      ><img src="./images/icon-calendar.svg" alt="" /><span
+                        >Calendar</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-4 cursor-pointer navlink"
+                      ><img src="./images/icon-reminders.svg" alt="" /><span
+                        >Reminders</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center gap-4 cursor-pointer navlink"
+                      ><img src="./images/icon-planning.svg" alt="" /><span
+                        >Planning</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-                <li>
-                  <button
-                    aria-expanded="false"
-                    aria-label="Toggle Company List"
-                    class="toggle"
-                    aria-controls="companyList"
-                  >
-                    <span>Company</span>
-                    <span
-                      ><img src="./images/icon-arrow-down.svg" alt="" />
-                      <img src="./images/icon-arrow-up.svg" alt="" />
-                    </span>
-                  </button>
-                  <ul role="list" id="companyList">
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Blog</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">About</a></li>
-              </ul>
-            </div>
+              <li>
+                <button
+                  aria-expanded="false"
+                  aria-label="Toggle Company List"
+                  class="flex items-center gap-2 cursor-pointer toggle hover:text-primary-head hover:font-medium group peer"
+                  aria-controls="companyList"
+                >
+                  <span class="sr-only">Toggle</span> <span>Company</span>
+                  <span
+                    ><img
+                      src="./images/icon-arrow-down.svg"
+                      alt=""
+                      class="block group-aria-expanded:hidden"
+                    />
+                    <img
+                      src="./images/icon-arrow-up.svg"
+                      alt=""
+                      class="hidden group-aria-expanded:block"
+                    />
+                  </span>
+                </button>
+                <ul
+                  role="list"
+                  id="companyList"
+                  class="flex-col hidden gap-4 py-4 pl-6 peer-aria-expanded:flex"
+                >
+                  <li><a href="#" class="navlink">History</a></li>
+                  <li><a href="#" class="navlink">Our Team</a></li>
+                  <li><a href="#" class="navlink">Blog</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="navlink">Careers</a></li>
+              <li><a href="#" class="navlink">About</a></li>
+            </ul>
 
-            <div>
-              <ul role="list">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-              </ul>
-            </div>
+            <ul
+              role="list"
+              class="flex flex-col gap-4 text-center md:flex-row md:items-center"
+            >
+              <li><a href="#" class="navlink">Login</a></li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block w-full py-2 border-2 rounded-lg navlink"
+                  >Register</a
+                >
+              </li>
+            </ul>
           </nav>
+
+          <div
+            class="overlay w-screen h-lvh top-0 right-0 z-20 backdrop-blur-sm bg-primary-background/2 peer-aria-expanded:block peer-aria-[expanded=false]:hidden absolute"
+          ></div>
         </div>
       </div>
     </header>
 
     <main>
-      <div class="max-w-6xl mx-auto flex flex-col gap-8">
-        <picture>
+      <div
+        class="flex flex-col items-center max-w-6xl gap-8 mx-auto md:gap-12 md:flex-row-reverse md:items-end md:px-6"
+      >
+        <picture class="">
           <source
             srcset="./images/image-hero-desktop.png"
             media="(min-width: 48rem)"
@@ -148,41 +194,71 @@
           />
         </picture>
 
-        <section class="px-4 w-full flex flex-col gap-4 items-center">
-          <h1 class="text-primary-head text-head font-bold">
-            Make remote work
+        <section
+          class="flex flex-col items-center w-full gap-4 px-4 md:gap-12 md:h-full md:items-start md:text-left md:px-0"
+        >
+          <h1 class="text-primary-head text-head font-bold md:leading-[1]">
+            Make <span class="md:block">remote work</span>
           </h1>
-          <p class="text-balance">
+          <p class="text-balance md:text-wrap">
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
           <a
             href="#"
-            class="bg-primary-head text-primary-background px-6 py-3 border-2 border-primary-head hover:bg-primary-background hover:text-primary-head transition-colors duration-300 cursor-pointer rounded-lg"
+            class="px-6 py-3 transition-colors duration-300 border-2 rounded-lg cursor-pointer bg-primary-head text-primary-background border-primary-head hover:bg-primary-background hover:text-primary-head"
             >Learn more</a
           >
+          <div
+            class="flex items-center justify-around w-full gap-4 mt-4 md:gap-6 md:justify-start md:mt-40"
+          >
+            <h2 class="sr-only">Our Clients</h2>
+            <img
+              src="./images/client-databiz.svg"
+              alt="databiz"
+              aria-label=""
+              class="w-16 md:w-24"
+            />
+            <img
+              src="./images/client-audiophile.svg"
+              alt="audiophile"
+              class="w-16 md:w-24"
+            />
+            <img
+              src="./images/client-meet.svg"
+              alt="meet"
+              class="w-16 md:w-24"
+            />
+            <img
+              src="./images/client-maker.svg"
+              alt="maker"
+              class="w-16 md:w-24"
+            />
+          </div>
         </section>
       </div>
     </main>
 
-    <footer class="mt-auto px-4">
-      <div class="max-w-6xl w-full">
+    <footer class="px-4 mt-6 md:mt-auto">
+      <div class="w-full max-w-6xl mx-auto">
         <p>
           Challenge by
           <a
             href="https://www.frontendmentor.io?ref=challenge"
             target="_blank"
-            class="cursor-pointer underline text-primary-head font-semibold hover:no-underline"
+            class="underline cursor-pointer text-primary-head hover:no-underline"
             >Frontend Mentor</a
           >. Coded by
           <a
             href="https://github.com/repro123/"
             target="_blank"
-            class="cursor-pointer underline text-primary-head font-semibold hover:no-underline"
+            class="underline cursor-pointer text-primary-head hover:no-underline"
             >Bello Ibrahim</a
           >.
         </p>
       </div>
     </footer>
+
+    <script src="./src/script.js"></script>
   </body>
 </html>
