@@ -21,12 +21,12 @@
   <body
     class="font-epilogue text-primary antialiased min-h-dvh flex flex-col *:w-full gap-4 font-medium text-center text-primary-paragraph"
   >
-    <header class="px-4 py-8">
+    <header class="p-4">
       <div
-        class="container flex items-center justify-between w-full mx-auto md:justify-start *:border md:gap-16"
+        class="container flex items-center justify-between w-full mx-auto md:justify-start md:gap-16"
       >
         <a href="#" aria-label="Snap Home" class="cursor-pointer">
-          <img src="./images/logo.svg" alt="Snap logo" />
+          <img src="./images/logo.svg" alt="Snap logo" class="md:w-40" />
         </a>
 
         <div class="md:w-full">
@@ -55,9 +55,9 @@
           >
             <ul
               role="list"
-              class="flex flex-col gap-4 md:flex-row md:items-center"
+              class="flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
             >
-              <li>
+              <li class="md:relative">
                 <button
                   aria-expanded="false"
                   aria-controls="featuresList"
@@ -80,12 +80,12 @@
                 <ul
                   role="list"
                   id="featuresList"
-                  class="flex-col hidden gap-4 py-4 pl-6 peer-aria-expanded:flex"
+                  class="flex-col hidden gap-4 py-4 pl-6 peer-aria-expanded:flex md:absolute md:right-0 md:bg-primary-background md:z-10 md:shadow-2xl md:p-8 md:top-full md:rounded-xl"
                 >
                   <li>
                     <a
                       href="#"
-                      class="flex items-center gap-4 cursor-pointer navlink"
+                      class="flex items-center gap-4 cursor-pointer navlink featuresLink"
                       ><img src="./images/icon-todo.svg" alt="" /><span
                         >Todo List</span
                       ></a
@@ -94,7 +94,7 @@
                   <li>
                     <a
                       href="#"
-                      class="flex items-center gap-4 cursor-pointer navlink"
+                      class="flex items-center gap-4 cursor-pointer navlink featuresLink"
                       ><img src="./images/icon-calendar.svg" alt="" /><span
                         >Calendar</span
                       ></a
@@ -103,7 +103,7 @@
                   <li>
                     <a
                       href="#"
-                      class="flex items-center gap-4 cursor-pointer navlink"
+                      class="flex items-center gap-4 cursor-pointer navlink featuresLink"
                       ><img src="./images/icon-reminders.svg" alt="" /><span
                         >Reminders</span
                       ></a
@@ -112,7 +112,7 @@
                   <li>
                     <a
                       href="#"
-                      class="flex items-center gap-4 cursor-pointer navlink"
+                      class="flex items-center gap-4 cursor-pointer navlink featuresLink"
                       ><img src="./images/icon-planning.svg" alt="" /><span
                         >Planning</span
                       ></a
@@ -121,7 +121,7 @@
                 </ul>
               </li>
 
-              <li>
+              <li class="md:relative">
                 <button
                   aria-expanded="false"
                   aria-label="Toggle Company List"
@@ -145,11 +145,11 @@
                 <ul
                   role="list"
                   id="companyList"
-                  class="flex-col hidden gap-4 py-4 pl-6 peer-aria-expanded:flex"
+                  class="flex-col hidden gap-4 py-4 pl-6 peer-aria-expanded:flex md:absolute md:right-0 md:bg-primary-background md:z-10 md:shadow-2xl md:p-8 md:top-full md:w-[150%] md:rounded-xl"
                 >
-                  <li><a href="#" class="navlink">History</a></li>
-                  <li><a href="#" class="navlink">Our Team</a></li>
-                  <li><a href="#" class="navlink">Blog</a></li>
+                  <li><a href="#" class="navlink companyLink">History</a></li>
+                  <li><a href="#" class="navlink companyLink">Our Team</a></li>
+                  <li><a href="#" class="navlink companyLink">Blog</a></li>
                 </ul>
               </li>
               <li><a href="#" class="navlink">Careers</a></li>
@@ -158,13 +158,13 @@
 
             <ul
               role="list"
-              class="flex flex-col gap-4 text-center md:flex-row md:items-center"
+              class="flex flex-col gap-4 text-center md:flex-row md:items-center md:gap-8"
             >
               <li><a href="#" class="navlink">Login</a></li>
               <li>
                 <a
                   href="#"
-                  class="inline-block w-full py-2 border-2 rounded-lg navlink"
+                  class="inline-block w-full py-2 border-2 rounded-lg navlink md:px-6"
                   >Register</a
                 >
               </li>
@@ -210,7 +210,7 @@
             >Learn more</a
           >
           <div
-            class="flex items-center justify-around w-full gap-4 mt-4 md:gap-6 md:justify-start md:mt-40"
+            class="flex items-center justify-around w-full gap-4 mt-4 md:gap-6 md:justify-start md:mt-16"
           >
             <h2 class="sr-only">Our Clients</h2>
             <img
